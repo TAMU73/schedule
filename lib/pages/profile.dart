@@ -9,7 +9,7 @@ class Profile extends StatefulWidget {
 
 class _ProfileState extends State<Profile> {
 
-  bool showEdit = true;
+  bool showEdit = false;
 
   void toggleView() {
     setState(() {
