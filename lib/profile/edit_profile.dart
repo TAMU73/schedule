@@ -14,7 +14,7 @@ class EditProfile extends StatefulWidget {
 
 class _EditProfileState extends State<EditProfile> {
 
-  String name = '';
+  String name;
   String section = '';
   String londonMetID = '';
   String collegeID = '';
