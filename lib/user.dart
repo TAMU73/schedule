@@ -6,6 +6,7 @@ class User {
   final String collegeID;
   final String email;
 
+
   User({this.name,this.section,this.londonMetID, this.email, this.collegeID});
 
 }

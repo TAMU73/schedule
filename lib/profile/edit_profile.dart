@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:schedule/pages/profile.dart';
+import 'package:schedule/profile/final_profile.dart';
 import 'package:schedule/user.dart';
 
 class EditProfile extends StatefulWidget {
@@ -14,7 +16,7 @@ class EditProfile extends StatefulWidget {
 
 class _EditProfileState extends State<EditProfile> {
 
-  String name;
+  String name = '';
   String section = '';
   String londonMetID = '';
   String collegeID = '';
@@ -129,7 +131,8 @@ class _EditProfileState extends State<EditProfile> {
                 icon: Icon(Icons.assignment_turned_in),
                 label: Text("Ok"),
                 onPressed: () {
-                  User(name: name, section: section, collegeID: collegeID, londonMetID: londonMetID, email: email);
+                  User user = User(name: name, section: section, collegeID: collegeID, londonMetID: londonMetID, email: email);
+                  Profile(user: user);
                   widget.toggleView();
                 },
               )

@@ -3,11 +3,11 @@ import 'package:schedule/user.dart';
 
 class FinalProfile extends StatelessWidget {
 
-  final User user = User();
+  final User user;
 
   final Function toggleView;
 
-  FinalProfile({this.toggleView});
+  FinalProfile({this.toggleView, this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,6 @@ class FinalProfile extends StatelessWidget {
       backgroundColor: Colors.grey[800],
       body: Column(
         children: <Widget>[
-          Text('${user.name}'),
           FlatButton.icon(
             icon: Icon(Icons.edit),
             label: Text("edit"),
