@@ -17,12 +17,6 @@ class _ProfileState extends State<Profile> {
 
   bool showEdit = false;
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    print(widget.user);
-  }
-
   void toggleView() {
     setState(() {
       showEdit = !showEdit;

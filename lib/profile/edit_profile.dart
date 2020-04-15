@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:schedule/pages/profile.dart';
-import 'package:schedule/profile/final_profile.dart';
 import 'package:schedule/user.dart';
 
 class EditProfile extends StatefulWidget {
@@ -132,6 +131,7 @@ class _EditProfileState extends State<EditProfile> {
                 label: Text("Ok"),
                 onPressed: () {
                   User user = User(name: name, section: section, collegeID: collegeID, londonMetID: londonMetID, email: email);
+                  print(user.name);
                   Profile(user: user);
                   widget.toggleView();
                 },
