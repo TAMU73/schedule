@@ -21,6 +21,7 @@ class FinalProfile extends StatelessWidget {
       backgroundColor: Colors.grey[800],
       body: Column(
         children: <Widget>[
+          Text(user.name),
           FlatButton.icon(
             icon: Icon(Icons.edit),
             label: Text("edit"),

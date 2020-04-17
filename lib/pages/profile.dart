@@ -5,17 +5,13 @@ import 'package:schedule/user.dart';
 
 class Profile extends StatefulWidget {
 
-  final User user;
-
-  Profile({this.user});
-
   @override
   _ProfileState createState() => _ProfileState();
 }
 
 class _ProfileState extends State<Profile> {
 
-  bool showEdit = false;
+  bool showEdit = true;
 
   void toggleView() {
     setState(() {
@@ -28,7 +24,7 @@ class _ProfileState extends State<Profile> {
     if(showEdit) {
       return EditProfile(toggleView: toggleView);
     } else {
-      return FinalProfile(toggleView: toggleView, user: widget.user);
+      return FinalProfile(toggleView: toggleView);
     }
   }
 }
